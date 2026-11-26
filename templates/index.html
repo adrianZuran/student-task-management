@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Task Management</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <main class="container">
+        <header>
+            <h1>Student Task Management</h1>
+            <p>Kelola tugas perkuliahan dengan lebih mudah.</p>
+        </header>
+
+        <section class="form-section">
+            <h2 id="form-title">Tambah Tugas</h2>
+
+            <form id="task-form">
+                <input type="hidden" id="task-id">
+
+                <label>Nama Tugas</label>
+                <input type="text" id="nama_tugas" required>
+
+                <label>Mata Kuliah</label>
+                <input type="text" id="mata_kuliah" required>
+
+                <label>Deskripsi</label>
+                <textarea id="deskripsi"></textarea>
+
+                <label>Deadline</label>
+                <input type="date" id="deadline" required>
+
+                <label>Prioritas</label>
+                <select id="prioritas">
+                    <option>Rendah</option>
+                    <option selected>Sedang</option>
+                    <option>Tinggi</option>
+                </select>
+
+                <label>Status</label>
+                <select id="status">
+                    <option>Belum</option>
+                    <option>Proses</option>
+                    <option>Selesai</option>
+                </select>
+
+                <div class="actions">
+                    <button type="submit" id="submit-btn">
+                        Simpan Tugas
+                    </button>
+                    <button type="button" id="cancel-btn" class="cancel" hidden>
+                        Batal
+                    </button>
+                </div>
+            </form>
+        </section>
+
+        <section class="task-section">
+            <h2>Daftar Tugas</h2>
+            <div id="task-list">Memuat data...</div>
+        </section>
+    </main>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
