@@ -1,0 +1,17 @@
+---
+title: "Template Environment (.env)"
+output: github_document
+---
+
+Salin konfigurasi di bawah ini ke dalam file `.env` di root folder project, lalu ganti placeholder dengan kredensial MongoDB Atlas Anda.
+
+> **Penting:** Jangan pernah commit file `.env` asli ke Git/GitHub.
+
+```env
+MONGO_URI=mongodb+srv://<username>:<password>@<cluster-url>/?retryWrites=true&w=majority
+```
+
+### Keterangan
+- `<username>`: Username database dari menu **Database Access** di MongoDB Atlas.
+- `<password>`: Password user database tersebut (URL-encode jika mengandung karakter spesial seperti `@`, `:`, `/`, `#`).
+- `<cluster-url>`: Hostname cluster MongoDB Atlas Anda (contoh: `cluster0.xxxxx.mongodb.net`).
